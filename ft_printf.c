@@ -6,7 +6,7 @@
 /*   By: aokur <aokur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 15:39:56 by aokur             #+#    #+#             */
-/*   Updated: 2025/07/24 17:10:11 by aokur            ###   ########.fr       */
+/*   Updated: 2025/07/24 17:59:53 by aokur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	printable(va_list b, char a)
 			|| a == 'x' || a == 'X' || a == '%')
 			{
 				if (a == 'c')
-				return (ft_putchar);
+				return (ft_putchar(va_arg(b, int)));
 				else if (a == 's')
 				return (ft_putstr);
 				else if (a == 'p')
