@@ -1,45 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_charfunc.c                                      :+:      :+:    :+:   */
+/*   ft_hexfunc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aokur <aokur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/29 15:54:15 by aokur             #+#    #+#             */
-/*   Updated: 2025/07/30 18:49:06 by aokur            ###   ########.fr       */
+/*   Created: 2025/07/30 16:55:55 by aokur             #+#    #+#             */
+/*   Updated: 2025/07/30 18:45:31 by aokur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_strlen(char *str)
+int	ft_putptr(unsigned long a)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int	ft_putchar(char c)
-{
+	char	*hex;
+	int		i;
 	
-	write(1, &c, 1);
-	return (1);
-}
-
-int	ft_putstr(char *str)
-{
-	int	i;
-
 	i = 0;
-	if (!str)
-		return (0);
-	while (str[i])
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+	hex = "0123456789abcdef";
+	if (a >= 16)
+		i += ft_putptr(a / 16);
+	i += ft_putchar(hex[a % 16]);
 	return (i);
 }

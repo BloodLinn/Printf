@@ -6,15 +6,16 @@
 /*   By: aokur <aokur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 16:10:33 by aokur             #+#    #+#             */
-/*   Updated: 2025/07/29 17:52:48 by aokur            ###   ########.fr       */
+/*   Updated: 2025/07/30 18:42:48 by aokur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 #include <stdio.h>
 
-int main()
+int	main(int argc, char **argv)
 {
-	
-	printf("\nTOPLAM KARAKTER SAYISI: %d", ft_printf("ben %s yas %d kis %c", "A", -1, 'a'));
+	int i = 25;
+	printf("%p\n", &i);
+	printf("\nTOPLAM: %d", ft_printf("%p", &i)); // Ne yazdırıyor?
 }

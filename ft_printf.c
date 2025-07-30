@@ -6,7 +6,7 @@
 /*   By: aokur <aokur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 15:39:56 by aokur             #+#    #+#             */
-/*   Updated: 2025/07/29 17:13:24 by aokur            ###   ########.fr       */
+/*   Updated: 2025/07/30 18:45:17 by aokur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,9 @@ int	ft_printable(va_list b, char a)
 			return (ft_putchar(va_arg(b, int))); //halledildi
 		else if (a == 's')
 			return (ft_putstr(va_arg(b, char *))); //halledildi
-		//else if (a == 'p')
-		//	return (ft_puthex);
-		else if (a == 'd')
-			return (ft_putnbr(va_arg(b, int))); //halledildi
-		else if (a == 'i')
+		else if (a == 'p')
+			return (ft_putptr((unsigned long)va_arg(b, void *)));
+		else if (a == 'd' || a == 'i')
 			return (ft_putnbr(va_arg(b, int))); //halledildi
 		else if (a == 'u') // halledildi
 			return (ft_putunbr(va_arg(b, unsigned int)));
@@ -34,8 +32,11 @@ int	ft_printable(va_list b, char a)
 		//	return (ft_puthex);
 		//else if (a == 'X')
 		//	return (ft_puthex);
-		//else if (a == '%')
-		//	return (write(1, '%', 1));
+		else if (a == '%') //halledildi
+		{
+			write(1, "%", 1);
+			return (1);
+		}
 	}
 	return (0);
 }

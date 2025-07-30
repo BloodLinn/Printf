@@ -2,7 +2,7 @@ NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
-SRCS = ft_printf.c ft_charfunc.c ft_nbrfunc.c
+SRCS = ft_printf.c ft_charfunc.c ft_nbrfunc.c ft_hexfunc.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -17,8 +17,7 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 
-re:
-	fclean all
+re: fclean all
 
 x: all
 	cc main.c $(NAME) -o ali
