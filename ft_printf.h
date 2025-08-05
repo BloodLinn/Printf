@@ -6,7 +6,7 @@
 /*   By: aokur <aokur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 15:40:34 by aokur             #+#    #+#             */
-/*   Updated: 2025/08/05 16:22:58 by aokur            ###   ########.fr       */
+/*   Updated: 2025/08/05 17:11:35 by aokur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 
 int	ft_strlen(char *str);

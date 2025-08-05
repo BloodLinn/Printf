@@ -6,7 +6,7 @@
 /*   By: aokur <aokur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 15:39:56 by aokur             #+#    #+#             */
-/*   Updated: 2025/08/05 16:39:38 by aokur            ###   ########.fr       */
+/*   Updated: 2025/08/05 17:19:30 by aokur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,7 @@ int	ft_printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%')
-		{
 			count += ft_printable(args, format[++i]);
-		}
 		else
 			count += write(1, &format[i], 1);
 		i++;

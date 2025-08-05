@@ -6,7 +6,7 @@
 /*   By: aokur <aokur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 15:54:15 by aokur             #+#    #+#             */
-/*   Updated: 2025/08/05 16:55:25 by aokur            ###   ########.fr       */
+/*   Updated: 2025/08/05 17:44:33 by aokur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,7 @@ int	ft_putstr(char *str)
 
 	i = 0;
 	if (!str)
-	{
-		ft_putstr("(null)");
-		return (6);
-	}
+		return (ft_putstr("(null)"));
 	while (str[i])
 	{
 		ft_putchar(str[i]);

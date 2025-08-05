@@ -6,7 +6,7 @@
 /*   By: aokur <aokur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 16:55:55 by aokur             #+#    #+#             */
-/*   Updated: 2025/08/05 16:56:02 by aokur            ###   ########.fr       */
+/*   Updated: 2025/08/05 17:44:14 by aokur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ int	ft_putptrtmp(unsigned long a)
 	int	i;
 
 	if (a == 0)
-	{
-		ft_putstr("(nil)");
-		return (5);
-	}
+		return (ft_putstr("(nil)"));
 	i = ft_putstr("0x");
 	i += ft_putptrsmall(a);
 	return (i);
