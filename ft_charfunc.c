@@ -6,11 +6,11 @@
 /*   By: aokur <aokur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 15:54:15 by aokur             #+#    #+#             */
-/*   Updated: 2025/07/30 18:49:06 by aokur            ###   ########.fr       */
+/*   Updated: 2025/08/05 16:55:25 by aokur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_strlen(char *str)
 {
@@ -24,7 +24,6 @@ int	ft_strlen(char *str)
 
 int	ft_putchar(char c)
 {
-	
 	write(1, &c, 1);
 	return (1);
 }
@@ -35,7 +34,10 @@ int	ft_putstr(char *str)
 
 	i = 0;
 	if (!str)
-		return (0);
+	{
+		ft_putstr("(null)");
+		return (6);
+	}
 	while (str[i])
 	{
 		ft_putchar(str[i]);

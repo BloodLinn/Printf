@@ -6,11 +6,11 @@
 /*   By: aokur <aokur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 16:05:09 by aokur             #+#    #+#             */
-/*   Updated: 2025/07/30 16:58:43 by aokur            ###   ########.fr       */
+/*   Updated: 2025/08/05 16:43:00 by aokur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_nbrlen(int nb)
 {
@@ -32,7 +32,7 @@ int	ft_nbrlen(int nb)
 	return (i);
 }
 
-int	ft_putnbr(int nb) // %d için
+int	ft_putnbr(int nb)
 {
 	int	i;
 
@@ -75,7 +75,7 @@ int	ft_unbrlen(unsigned int nb)
 	return (i);
 }
 
-int	ft_putunbr(unsigned int nb) //%u için
+int	ft_putunbr(unsigned int nb)
 {
 	if (nb >= 10)
 	{

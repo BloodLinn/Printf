@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aokur <aokur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 15:40:34 by aokur             #+#    #+#             */
-/*   Updated: 2025/07/30 18:43:22 by aokur            ###   ########.fr       */
+/*   Updated: 2025/08/05 16:22:58 by aokur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <stdlib.h>
@@ -28,7 +28,9 @@ int	ft_putstr(char *str);
 int	ft_putnbr(int nb);
 int	ft_putunbr(unsigned int nb);
 
-int	ft_putptr(unsigned long a);
+int	ft_putptrtmp(unsigned long a);
+int	ft_putptrsmall(unsigned long a);
+int	ft_putptrbig(unsigned long a);
 
 int	ft_printable(va_list b, char a);
 int	ft_printf(const char *format, ...);

@@ -6,11 +6,11 @@
 /*   By: aokur <aokur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 15:39:56 by aokur             #+#    #+#             */
-/*   Updated: 2025/07/30 18:45:17 by aokur            ###   ########.fr       */
+/*   Updated: 2025/08/05 16:39:38 by aokur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_printable(va_list b, char a)
 {
@@ -19,20 +19,20 @@ int	ft_printable(va_list b, char a)
 		|| a == 'x' || a == 'X' || a == '%')
 	{
 		if (a == 'c')
-			return (ft_putchar(va_arg(b, int))); //halledildi
+			return (ft_putchar(va_arg(b, int)));
 		else if (a == 's')
-			return (ft_putstr(va_arg(b, char *))); //halledildi
+			return (ft_putstr(va_arg(b, char *)));
 		else if (a == 'p')
-			return (ft_putptr((unsigned long)va_arg(b, void *)));
+			return (ft_putptrtmp((unsigned long)va_arg(b, void *)));
 		else if (a == 'd' || a == 'i')
-			return (ft_putnbr(va_arg(b, int))); //halledildi
-		else if (a == 'u') // halledildi
+			return (ft_putnbr(va_arg(b, int)));
+		else if (a == 'u')
 			return (ft_putunbr(va_arg(b, unsigned int)));
-		//else if (a == 'x')
-		//	return (ft_puthex);
-		//else if (a == 'X')
-		//	return (ft_puthex);
-		else if (a == '%') //halledildi
+		else if (a == 'x')
+			return (ft_putptrsmall((unsigned int)va_arg(b, int)));
+		else if (a == 'X')
+			return (ft_putptrbig((unsigned int)va_arg(b, int)));
+		else if (a == '%')
 		{
 			write(1, "%", 1);
 			return (1);
