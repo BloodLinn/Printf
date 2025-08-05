@@ -6,7 +6,7 @@
 /*   By: aokur <aokur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 15:39:56 by aokur             #+#    #+#             */
-/*   Updated: 2025/08/05 17:19:30 by aokur            ###   ########.fr       */
+/*   Updated: 2025/08/05 17:46:38 by aokur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,7 @@ int	ft_printable(va_list b, char a)
 		else if (a == 'X')
 			return (ft_putptrbig((unsigned int)va_arg(b, int)));
 		else if (a == '%')
-		{
-			write(1, "%", 1);
-			return (1);
-		}
+			return (ft_putchar('%'));
 	}
 	return (0);
 }
